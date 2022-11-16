@@ -26,10 +26,10 @@ function CoinContainer({ coins=COINS }) {
     const newCoin = _.sample(coins);
     setCoin(newCoin);
     if(newCoin.side === "head") {
-      setHeadCount();
+      setHeadCount(count => count + 1);
     }
     else {
-      setTailCount();
+      setTailCount(count => count + 1);
     }
   }
 
